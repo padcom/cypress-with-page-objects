@@ -4,4 +4,5 @@ module.exports = {
   presets: [
     require('poi-preset-eslint')({ mode: '*' }),
   ],
+  hotReload: false,
 }

@@ -3,9 +3,9 @@
     <section v-cloak class="todoapp">
       <header class="header">
         <h1>todos</h1>
-          <input
-            class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?"
-            v-model="newTodo" @keyup.enter="addTodo">
+        <input
+          class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?"
+          v-model="newTodo" @keyup.enter="addTodo">
       </header>
       <section class="main" v-show="todos.length">
         <input class="toggle-all" type="checkbox" v-model="allDone">
@@ -16,9 +16,9 @@
           <strong v-text="remaining" /> {{ pluralize('item', remaining) }} left
         </span>
         <ul class="filters">
-          <li><a href="#all" @click="visibility = 'all'" :class="{selected: visibility == 'all'}">All</a></li>
-          <li><a href="#/active" @click="visibility = 'active'" :class="{selected: visibility == 'active'}">Active</a></li>
-          <li><a href="#/completed" @click="visibility = 'completed'" :class="{selected: visibility == 'completed'}">Completed</a></li>
+          <li><a href="#" @click.prevent="visibility = 'all'" :class="{selected: visibility == 'all'}">All</a></li>
+          <li><a href="#" @click.prevent="visibility = 'active'" :class="{selected: visibility == 'active'}">Active</a></li>
+          <li><a href="#" @click.prevent="visibility = 'completed'" :class="{selected: visibility == 'completed'}">Completed</a></li>
         </ul>
         <button class="clear-completed" @click="removeCompleted" v-show="todos.length > remaining">
           Clear completed
@@ -28,6 +28,7 @@
     <footer class="info">
       <p>Double-click to edit a todo</p>
       <p>Based on implementation by <a href="http://evanyou.me">Evan You</a></p>
+      <p><a class="google-for-todomvc" href="https://www.google.com/search?q=todo+mvc">Search Todo MVC on Google</a></p>
     </footer>
   </div>
 </template>
