@@ -16,6 +16,7 @@
     "cypress": "^2.1.0",
     "eslint": "^4.19.1",
     "eslint-config-aplaline": "git+https://github.com/aplaline/eslint-config-aplaline.git#1.5.3",
+    "hoek": "^4.2.1",
     "poi": "^9.6.13",
     "poi-preset-eslint": "^9.1.1",
     "todomvc-app-css": "^2.1.2",
