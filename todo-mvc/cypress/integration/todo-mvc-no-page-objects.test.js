@@ -51,5 +51,6 @@ describe('Tests using only Cypress API', () => {
     cy.get('.todo-list li')
       .should('have.length', 1)
       .should('contain', 'bread')
+    cy.get('.todo-list li').should('not.have.class', 'completed')
   })
 })
